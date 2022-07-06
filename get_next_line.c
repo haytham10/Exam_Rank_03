@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   gnl.c                                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmokhtar <hmokhtar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 19:55:21 by hmokhtar          #+#    #+#             */
-/*   Updated: 2022/07/06 22:21:40 by hmokhtar         ###   ########.fr       */
+/*   Updated: 2022/07/06 22:22:55 by hmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char *get_next_line(int fd)
 {
     static char    *buffer_reminder;
     buffer_reminder = 0;
-    if (fd < 0 || BUFFER_SIZE <= 0)
+    if (fd < 0)
         return (NULL);
     char buff[1];
     char line[1000000];
